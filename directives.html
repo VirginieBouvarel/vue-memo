@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue.js : Bases et directives</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>{{ title + "!!!" }}</h1>
+      <h2>{{ title === 'Super intro !' ? 'Bon sens' : 'Mauvais sens' }}</h2>
+      <input type="text" v-model="title" />
+      <button @click="reverseTitle">Inverser</button>
+      <p v-once :title="title">
+        <span>{{ title }}</span>
+        Lorem ipsum dolor sit amet
+        <span v-html="strongTag"></span>
+      </p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <script>
+      const app = new Vue({
+        el: "#app",
+        data: {
+          title: "Super intro 2",
+          strongTag: "<strong>IMPORTANT!</strong>",
+        },
+        methods: {
+          reverseTitle() {
+            this.title = this.title.split("").reverse().join("");
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

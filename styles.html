@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue.js : La gestion des styles</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  </head>
+  <body>
+    <style>
+      .title {
+        font-style: italic;
+        font-size: 35px;
+      }
+      .blue {
+        color: blue;
+      }
+      .underline {
+        text-decoration: underline;
+      }
+      .red {
+        color: red;
+      }
+      .orange {
+        color: orange;
+      }
+      .pink {
+        color: pink;
+      }
+    </style>
+    <div id="app">
+      <button @click="isBlue = !isBlue">Toggle Blue</button>
+      <button @click="isUnderline = !isUnderline">Toggle underline</button>
+      <h1 class="title" :class="[classes, error]">Titre 1</h1>
+      <h1 class="title" :class="classes">Titre 2</h1>
+
+      <input type="text" v-model="color" />
+      <input type="text" v-model="size" />
+
+      <h1 class="title" :class="color">Titre 3</h1>
+      <h1 :style="{color: color, 'font-size': size + 'px'}">Titre 4</h1>
+
+      <h1 :class="promotion">Promotion en Août</h1>
+    </div>
+
+    <script>
+      const app = new Vue({
+        el: "#app",
+        data: {
+          isBlue: true,
+          isUnderline: true,
+          isError: true,
+          color: "orange",
+          size: 35,
+        },
+        computed: {
+          classes() {
+            return {
+              blue: this.isBlue,
+              underline: this.isUnderline,
+            };
+          },
+          error() {
+            return {
+              red: !this.isBlue,
+            };
+          },
+          promotion() {
+            const date = new Date();
+            console.log(date.getMonth());
+            if (date.getMonth() === 7) {
+              return "pink";
+            }
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

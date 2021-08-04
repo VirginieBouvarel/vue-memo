@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue.js : Les boucles</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  </head>
+  <body>
+    <style>
+      li {
+        font-size: 25px;
+      }
+    </style>
+
+    <div id="app">
+      <p>{{ names[0] }}</p>
+
+      <ul>
+        <li v-for="(name, index) in names" :key="index">
+          {{ index }} - {{ name }}
+        </li>
+      </ul>
+      <br />
+      <hr />
+      <br />
+      <template v-for="(name, index) in names">
+        <!--pas de key-->
+        <h1>{{ name }}</h1>
+        <span>{{ index }}</span>
+      </template>
+      <br />
+      <hr />
+      <br />
+      <template v-for="(employee, index) in employees">
+        <p>{{ employee.name }} is a(n) {{ employee.job }}.</p>
+      </template>
+      <br />
+      <hr />
+      <br />
+      <ul>
+        <li v-for="employee in employees">
+          <p v-for="(value, key, index) in employee">
+            {{ index }}: {{key }} = {{ value }}
+          </p>
+        </li>
+      </ul>
+      <br />
+      <hr />
+      <br />
+      <ul>
+        <li v-for="n in 10">{{ n * 5 }}</li>
+      </ul>
+    </div>
+
+    <script>
+      const app = new Vue({
+        el: "#app",
+        data: {
+          names: ["John", "Jane", "Alex"],
+          employees: [
+            { name: "Roberta", job: "Architect", age: "33" },
+            { name: "Dylan", job: "Alchemist", age: "28" },
+            { name: "Cathy", job: "Professor", age: "45" },
+            { name: "Cynthia", job: "Seller", age: "23" },
+            { name: "Marc", job: "Physician", age: "68" },
+          ],
+        },
+      });
+    </script>
+  </body>
+</html>

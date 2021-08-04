@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue.js : Les conditions</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  </head>
+  <body>
+    <style></style>
+    <div id="app">
+      <button @click="show = !show">Toggle text</button>
+
+      <template v-if="show">
+        <p v-if="color === 'red'">Vue.js est incroyable !</p>
+        <p v-else-if="color === 'blue'">React est génial !</p>
+        <strong v-else>Autre texte !</strong>
+      </template>
+
+      <template>
+        <button @click="display = !display">Toggle v-show</button>
+        <p v-show="display" data-id="58769">
+          Utilisation de v-show pour afficher/masquer un élément, comme on le
+          ferait avec l'attribut hidden.
+        </p>
+      </template>
+    </div>
+
+    <script>
+      const app = new Vue({
+        el: "#app",
+        data: {
+          show: false,
+          color: "blue",
+          display: true,
+        },
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue.js : Les évènements</title>
+  </head>
+  <body>
+    <div id="app">
+      <button @click="increment">Incrémenter</button>
+      <button @click="increase(5)">Augmenter</button>
+      <button @click="increaseWithHover(5, $event)">
+        Augmenter et Survoler
+      </button>
+
+      <h3>{{ counter }}</h3>
+
+      <input type="text" @keyup.enter="displayKeyname('Enter')" />
+      <input
+        type="text"
+        @keyup.enter.space="displayKeyname('Enter or Space')"
+      />
+      <input type="text" @keyup.alt.67="displayKeyname('Alt + C')" />
+
+      <p @mouseover="hover">
+        Lorem ipsum dolor sit amet.<br />
+        <strong @mouseover.stop="">IMPORTANT !</strong><br />
+        Balise: {{ tagname }}
+      </p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <script>
+      const app = new Vue({
+        el: "#app",
+        data: {
+          counter: 0,
+          tagname: "",
+        },
+        methods: {
+          increment() {
+            this.counter++;
+          },
+          hover(event) {
+            this.tagname = event.target.tagName;
+          },
+          increase(amount) {
+            this.counter += amount;
+          },
+          increaseWithHover(amount, event) {
+            this.counter += amount;
+            this.tagname = event.target.tagName;
+          },
+          displayKeyname(keyname) {
+            alert(keyname);
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
