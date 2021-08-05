@@ -90,7 +90,8 @@ body {
   position: relative;
 }
 
-ol, ul {
+ol,
+ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -115,7 +116,9 @@ iframe {
   border: 0;
 }
 
-a, a:focus, a:hover {
+a,
+a:focus,
+a:hover {
   text-decoration: none;
   outline: 0;
 }
@@ -139,7 +142,11 @@ a, a:focus, a:hover {
  *  Typography
  *
  **/
-.btn i, .btn-large i, .btn-floating i, .btn-large i, .btn-flat i {
+.btn i,
+.btn-large i,
+.btn-floating i,
+.btn-large i,
+.btn-flat i {
   font-size: 1em;
   line-height: inherit;
 }
@@ -148,8 +155,12 @@ a, a:focus, a:hover {
   background: #f9f9ff;
 }
 
-h1, h2, h3,
-h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Poppins", sans-serif;
   color: #222222;
   line-height: 1.2em !important;
@@ -158,8 +169,12 @@ h4, h5, h6 {
   font-weight: 600;
 }
 
-.h1, .h2, .h3,
-.h4, .h5, .h6 {
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
   margin-bottom: 0;
   margin-top: 0;
   font-family: "Poppins", sans-serif;
@@ -167,31 +182,38 @@ h4, h5, h6 {
   color: #222222;
 }
 
-h1, .h1 {
+h1,
+.h1 {
   font-size: 36px;
 }
 
-h2, .h2 {
+h2,
+.h2 {
   font-size: 30px;
 }
 
-h3, .h3 {
+h3,
+.h3 {
   font-size: 24px;
 }
 
-h4, .h4 {
+h4,
+.h4 {
   font-size: 18px;
 }
 
-h5, .h5 {
+h5,
+.h5 {
   font-size: 16px;
 }
 
-h6, .h6 {
+h6,
+.h6 {
   font-size: 14px;
 }
 
-td, th {
+td,
+th {
   border-radius: 0px;
 }
 
@@ -204,7 +226,8 @@ td, th {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-.clear::before, .clear::after {
+.clear::before,
+.clear::after {
   content: " ";
   display: table;
 }
@@ -333,16 +356,19 @@ td, th {
   border-radius: 3px;
   -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.25);
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.25);
-  -webkit-transition: .2s ease-in-out;
-  -o-transition: .2s ease-in-out;
-  transition: .2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .section-title {
   margin-bottom: 75px;
 }
 
-.gradient-bg, .page-top-banner .overlay-bg, .banner-section .overlay-bg, .features-wrap .single-feature .overlay-bg {
+.gradient-bg,
+.page-top-banner .overlay-bg,
+.banner-section .overlay-bg,
+.features-wrap .single-feature .overlay-bg {
   background: -moz-linear-gradient(0deg, #f51dac 0%, #691cff 100%);
   background: -webkit-linear-gradient(0deg, #f51dac 0%, #691cff 100%);
   background: -ms-linear-gradient(0deg, #f51dac 0%, #691cff 100%);
@@ -380,7 +406,7 @@ td, th {
   background-size: cover;
 }
 .page-top-banner .overlay-bg {
-  opacity: .8;
+  opacity: 0.8;
 }
 .page-top-banner h1 {
   color: #000;
@@ -776,7 +802,7 @@ td, th {
 
 /* Down Arrow Icon for Megamenu */
 .icon-dope-nav-down-arrow {
-  font-family: 'FontAwesome';
+  font-family: "FontAwesome";
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -792,7 +818,7 @@ td, th {
 
 .dopenav ul li.megamenu-item > a:after,
 .dopenav ul li.has-down > a:after {
-  font-family: 'FontAwesome';
+  font-family: "FontAwesome";
   content: "\f107";
   font-size: 12px;
   color: #000000;
@@ -1026,39 +1052,178 @@ td, th {
   border-bottom: 1px solid rgba(242, 244, 248, 0.7);
 }
 
-.dopenav ul li .dropdown li .dropdown li .dropdown li .dropdown li:last-child a {
+.dopenav
+  ul
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li:last-child
+  a {
   border-bottom: none;
 }
 
-.dopenav ul li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li a {
+.dopenav
+  ul
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  a {
   border-bottom: 1px solid rgba(242, 244, 248, 0.7);
 }
 
-.dopenav ul li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li:last-child a {
+.dopenav
+  ul
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li:last-child
+  a {
   border-bottom: none;
 }
 
-.dopenav ul li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li a {
+.dopenav
+  ul
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  a {
   border-bottom: 1px solid rgba(242, 244, 248, 0.7);
 }
 
-.dopenav ul li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li:last-child a {
+.dopenav
+  ul
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li:last-child
+  a {
   border-bottom: none;
 }
 
-.dopenav ul li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li a {
+.dopenav
+  ul
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  a {
   border-bottom: 1px solid rgba(242, 244, 248, 0.7);
 }
 
-.dopenav ul li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li:last-child a {
+.dopenav
+  ul
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li:last-child
+  a {
   border-bottom: none;
 }
 
-.dopenav ul li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li a {
+.dopenav
+  ul
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  a {
   border-bottom: 1px solid rgba(242, 244, 248, 0.7);
 }
 
-.dopenav ul li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li:last-child a {
+.dopenav
+  ul
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li:last-child
+  a {
   border-bottom: none;
 }
 
@@ -1101,12 +1266,114 @@ td, th {
 
 .breakpoint-off .dopenav ul li .dropdown li .dropdown li .dropdown,
 .breakpoint-off .dopenav ul li .dropdown li .dropdown li .dropdown li .dropdown,
-.breakpoint-off .dopenav ul li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown,
-.breakpoint-off .dopenav ul li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown,
-.breakpoint-off .dopenav ul li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown,
-.breakpoint-off .dopenav ul li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown,
-.breakpoint-off .dopenav ul li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown,
-.breakpoint-off .dopenav ul li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown {
+.breakpoint-off
+  .dopenav
+  ul
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown,
+.breakpoint-off
+  .dopenav
+  ul
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown,
+.breakpoint-off
+  .dopenav
+  ul
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown,
+.breakpoint-off
+  .dopenav
+  ul
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown,
+.breakpoint-off
+  .dopenav
+  ul
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown,
+.breakpoint-off
+  .dopenav
+  ul
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown {
   opacity: 0;
   visibility: hidden;
   top: 120%;
@@ -1120,13 +1387,125 @@ td, th {
 
 .breakpoint-off .dopenav ul li .dropdown li:hover .dropdown,
 .breakpoint-off .dopenav ul li .dropdown li .dropdown li:hover .dropdown,
-.breakpoint-off .dopenav ul li .dropdown li .dropdown li .dropdown li:hover .dropdown,
-.breakpoint-off .dopenav ul li .dropdown li .dropdown li .dropdown li .dropdown li:hover .dropdown,
-.breakpoint-off .dopenav ul li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li:hover .dropdown,
-.breakpoint-off .dopenav ul li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li:hover .dropdown,
-.breakpoint-off .dopenav ul li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li:hover .dropdown,
-.breakpoint-off .dopenav ul li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li:hover .dropdown,
-.breakpoint-off .dopenav ul li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li:hover .dropdown {
+.breakpoint-off
+  .dopenav
+  ul
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li:hover
+  .dropdown,
+.breakpoint-off
+  .dopenav
+  ul
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li:hover
+  .dropdown,
+.breakpoint-off
+  .dopenav
+  ul
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li:hover
+  .dropdown,
+.breakpoint-off
+  .dopenav
+  ul
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li:hover
+  .dropdown,
+.breakpoint-off
+  .dopenav
+  ul
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li:hover
+  .dropdown,
+.breakpoint-off
+  .dopenav
+  ul
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li:hover
+  .dropdown,
+.breakpoint-off
+  .dopenav
+  ul
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li:hover
+  .dropdown {
   opacity: 1;
   visibility: visible;
   top: -10px;
@@ -1311,13 +1690,125 @@ td, th {
 
 .dropdown-rtl.breakpoint-off .dopenav ul li .dropdown li .dropdown,
 .dropdown-rtl.breakpoint-off .dopenav ul li .dropdown li .dropdown li .dropdown,
-.dropdown-rtl.breakpoint-off .dopenav ul li .dropdown li .dropdown li .dropdown li .dropdown,
-.dropdown-rtl.breakpoint-off .dopenav ul li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown,
-.dropdown-rtl.breakpoint-off .dopenav ul li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown,
-.dropdown-rtl.breakpoint-off .dopenav ul li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown,
-.dropdown-rtl.breakpoint-off .dopenav ul li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown,
-.dropdown-rtl.breakpoint-off .dopenav ul li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown,
-.dropdown-rtl.breakpoint-off .dopenav ul li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown {
+.dropdown-rtl.breakpoint-off
+  .dopenav
+  ul
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown,
+.dropdown-rtl.breakpoint-off
+  .dopenav
+  ul
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown,
+.dropdown-rtl.breakpoint-off
+  .dopenav
+  ul
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown,
+.dropdown-rtl.breakpoint-off
+  .dopenav
+  ul
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown,
+.dropdown-rtl.breakpoint-off
+  .dopenav
+  ul
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown,
+.dropdown-rtl.breakpoint-off
+  .dopenav
+  ul
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown,
+.dropdown-rtl.breakpoint-off
+  .dopenav
+  ul
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown {
   right: 180px;
   left: auto;
   opacity: 0;
@@ -1332,14 +1823,134 @@ td, th {
 }
 
 .dropdown-rtl.breakpoint-off .dopenav ul li .dropdown li:hover .dropdown,
-.dropdown-rtl.breakpoint-off .dopenav ul li .dropdown li .dropdown li:hover .dropdown,
-.dropdown-rtl.breakpoint-off .dopenav ul li .dropdown li .dropdown li .dropdown li:hover .dropdown,
-.dropdown-rtl.breakpoint-off .dopenav ul li .dropdown li .dropdown li .dropdown li .dropdown li:hover .dropdown,
-.dropdown-rtl.breakpoint-off .dopenav ul li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li:hover .dropdown,
-.dropdown-rtl.breakpoint-off .dopenav ul li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li:hover .dropdown,
-.dropdown-rtl.breakpoint-off .dopenav ul li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li:hover .dropdown,
-.dropdown-rtl.breakpoint-off .dopenav ul li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li:hover .dropdown,
-.dropdown-rtl.breakpoint-off .dopenav ul li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li .dropdown li:hover .dropdown {
+.dropdown-rtl.breakpoint-off
+  .dopenav
+  ul
+  li
+  .dropdown
+  li
+  .dropdown
+  li:hover
+  .dropdown,
+.dropdown-rtl.breakpoint-off
+  .dopenav
+  ul
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li:hover
+  .dropdown,
+.dropdown-rtl.breakpoint-off
+  .dopenav
+  ul
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li:hover
+  .dropdown,
+.dropdown-rtl.breakpoint-off
+  .dopenav
+  ul
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li:hover
+  .dropdown,
+.dropdown-rtl.breakpoint-off
+  .dopenav
+  ul
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li:hover
+  .dropdown,
+.dropdown-rtl.breakpoint-off
+  .dopenav
+  ul
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li:hover
+  .dropdown,
+.dropdown-rtl.breakpoint-off
+  .dopenav
+  ul
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li:hover
+  .dropdown,
+.dropdown-rtl.breakpoint-off
+  .dopenav
+  ul
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li
+  .dropdown
+  li:hover
+  .dropdown {
   opacity: 1;
   visibility: visible;
   top: 0;
@@ -1386,7 +1997,7 @@ td, th {
   min-height: 950px;
 }
 .banner-section .overlay-bg {
-  opacity: .6;
+  opacity: 0.6;
 }
 .banner-section .banner-left h1 {
   font-size: 55px;
@@ -1551,7 +2162,7 @@ td, th {
   -ms-filter: grayscale(100%);
   -o-filter: grayscale(100%);
   filter: grayscale(100%);
-  opacity: .5;
+  opacity: 0.5;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -1658,7 +2269,13 @@ td, th {
   padding-bottom: 30px;
 }
 .explore-section .overlay-bg {
-  background: -webkit-gradient(linear, left top, right top, from(#000), to(rgba(235, 143, 169, 0)));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#000),
+    to(rgba(235, 143, 169, 0))
+  );
   background: -webkit-linear-gradient(left, #000, rgba(235, 143, 169, 0));
   background: -o-linear-gradient(left, #000, rgba(235, 143, 169, 0));
   background: linear-gradient(to right, #000, rgba(235, 143, 169, 0));
@@ -1667,7 +2284,7 @@ td, th {
   margin-top: 30px;
 }
 .explore-section .single-counter {
-  width: calc(100%/3);
+  width: calc(100% / 3);
   border-right: 1px solid #eeeeee5c;
   text-align: center;
 }
@@ -1962,10 +2579,12 @@ td, th {
   text-align: center;
   margin-top: 40px;
 }
-.screenshot-section .owl-nav .owl-next, .screenshot-section .owl-nav .owl-prev {
+.screenshot-section .owl-nav .owl-next,
+.screenshot-section .owl-nav .owl-prev {
   font-size: 30px !important;
 }
-.screenshot-section .owl-nav .owl-next:focus, .screenshot-section .owl-nav .owl-prev:focus {
+.screenshot-section .owl-nav .owl-next:focus,
+.screenshot-section .owl-nav .owl-prev:focus {
   outline: none;
 }
 
@@ -2001,8 +2620,10 @@ td, th {
   transition: 0.3s;
 }
 
-.screenshot_slider .owl-controls .owl-prev, .testimonial-caroussel .owl-controls .owl-prev,
-.screenshot_slider .owl-controls .owl-next, .testimonial-caroussel .owl-controls .owl-next {
+.screenshot_slider .owl-controls .owl-prev,
+.testimonial-caroussel .owl-controls .owl-prev,
+.screenshot_slider .owl-controls .owl-next,
+.testimonial-caroussel .owl-controls .owl-next {
   -webkit-box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0);
   box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0);
   color: #fff;
@@ -2023,14 +2644,18 @@ td, th {
   z-index: 9;
 }
 
-.screenshot_slider .owl-controls .owl-prev:hover, .testimonial-caroussel .owl-prev:hover,
-.screenshot_slider .owl-controls .owl-next:hover, .testimonial-caroussel .owl-next:hover {
+.screenshot_slider .owl-controls .owl-prev:hover,
+.testimonial-caroussel .owl-prev:hover,
+.screenshot_slider .owl-controls .owl-next:hover,
+.testimonial-caroussel .owl-next:hover {
   border-color: #fff;
   color: #ffffff;
 }
 
-.screenshot_slider .owl-controls .owl-prev span, .testimonial-caroussel .owl-controls .owl-prev span,
-.screenshot_slider .owl-controls .owl-next span, .testimonial-caroussel .owl-controls .owl-next span {
+.screenshot_slider .owl-controls .owl-prev span,
+.testimonial-caroussel .owl-controls .owl-prev span,
+.screenshot_slider .owl-controls .owl-next span,
+.testimonial-caroussel .owl-controls .owl-next span {
   font-size: 28px;
 }
 
@@ -2646,7 +3271,7 @@ td, th {
   position: absolute;
   top: 50%;
   right: 10px;
-  font-family: 'FontAwesome';
+  font-family: "FontAwesome";
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -2701,7 +3326,9 @@ td, th {
   background-attachment: fixed;
   background-size: cover;
 }
-.cta-section h1, .cta-section h4, .cta-section p {
+.cta-section h1,
+.cta-section h4,
+.cta-section p {
   color: #fff;
 }
 .cta-section h4 {
@@ -2729,7 +3356,9 @@ td, th {
   background: #691cff;
   color: #fff;
 }
-.price-section .price-right .main i, .price-section .price-right .main h4, .price-section .price-right .main h2 {
+.price-section .price-right .main i,
+.price-section .price-right .main h4,
+.price-section .price-right .main h2 {
   color: #fff;
 }
 .price-section .price-right .main .bottom-wrap {
@@ -2843,7 +3472,8 @@ td, th {
 .stat-section {
   background: #691cff;
 }
-.stat-section h1, .stat-section h4 {
+.stat-section h1,
+.stat-section h4 {
   color: #fff;
 }
 .stat-section .single-stat {
@@ -2981,7 +3611,7 @@ td, th {
   color: #fff;
 }
 .footer-section .copyright-text i {
-  color: #FF0000;
+  color: #ff0000;
 }
 .footer-section .copyright-text a {
   color: #fff;
@@ -3040,4 +3670,27 @@ td, th {
   color: #691cff;
 }
 
+/* CUSTOM CSS */
 
+.pointedElement {
+  cursor: pointer;
+}
+
+.accordion dd {
+  opacity: 0;
+  height: 0;
+  transition-duration: 0.3s;
+  padding: 0 20px;
+}
+
+.accordion dd.active {
+  opacity: 1;
+  height: 110px;
+  padding: 10px 20px 20px;
+}
+
+@media screen and (max-width: 380px) {
+  .accordion dd.active {
+    height: 200px;
+  }
+}
