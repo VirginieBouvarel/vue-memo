@@ -1,7 +1,9 @@
 new Vue({
   el: "#app",
   data: {
+    inArticlePage: false,
     articles: {
+      currentIndex: 0,
       data: [
         {
           title: 'To shewing another demands to.',
@@ -24,6 +26,21 @@ new Vue({
           img: 'img/blog/p5.jpg'
         }
       ]
+    }
+  },
+  computed: {
+    currentArticle: function () {
+      return this.articles.data[this.articles.currentIndex];
+    }
+  },
+  methods: {
+    showArticle: function (index) {
+      this.articles.currentIndex = index;
+      this.inArticlePage = true;
+      window.scrollTo(0, 0);
+    },
+    goToList: function () {
+      this.inArticlePage = false;
     }
   }
 })
