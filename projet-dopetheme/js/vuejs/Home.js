@@ -1,7 +1,9 @@
 new Vue({
   el: '#app',
   data: {
+    inProductPage: false,
     products: {
+      currentIndex: 0,
       data: [
         {
           name: 'Titre du produit 1',
@@ -61,6 +63,18 @@ new Vue({
           answer: 'Far curiosity incommode now led smallness allowance. Favour bed assure son things yet. She consisted consulted elsewhere happiness disposing household any old the.Widow downs you new shade drift hopes small.So otherwise commanded sweetness we improving.'
         }
       ]
+    }
+  },
+  computed: {
+    currentProduct: function () {
+      return this.products.data[this.products.currentIndex];
+    }
+  },
+  methods: {
+    showProduct: function (index) {
+      this.products.currentIndex = index;
+      this.inProductPage = true;
+      window.scrollTo(0, 0);
     }
   }
 })

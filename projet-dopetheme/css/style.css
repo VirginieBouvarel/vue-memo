@@ -3272,7 +3272,7 @@ th {
   top: 50%;
   right: 10px;
   font-family: "FontAwesome";
-  speak: none;
+  speak-as: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
