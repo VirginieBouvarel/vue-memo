@@ -492,9 +492,9 @@ CSS
               <div class="col-lg-4 details-right">
                 <ul>
                   <li><span>Client:</span> {{ currentProduct.client }}</li>
-                  <li>
-                    <span>Category:</span> {{ currentProduct.categories.join(',
-                    ') }}
+                  <li v-html>
+                    <span>Category:</span> {{
+                    currentProduct.categories.join("/") }}
                   </li>
                   <li><span>Visit:</span> {{ currentProduct.visit }}</li>
                   <li><span>Date:</span> {{ currentProduct.date }}</li>
