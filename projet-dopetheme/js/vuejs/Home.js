@@ -75,6 +75,9 @@ new Vue({
       this.products.currentIndex = index;
       this.inProductPage = true;
       window.scrollTo(0, 0);
+    },
+    goToHome: function () {
+      this.inProductPage = false;
     }
   }
 })

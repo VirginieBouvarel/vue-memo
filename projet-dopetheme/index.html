@@ -76,19 +76,25 @@ CSS
                   <div class="dopenav">
                     <ul id="nav">
                       <li>
-                        <a href="#banner-section">Accueil</a>
+                        <a @click="goToHome" href="#banner-section">Accueil</a>
                       </li>
                       <li>
-                        <a href="#section-portfolio">Projets</a>
+                        <a @click="goToHome" href="#section-portfolio"
+                          >Projets</a
+                        >
                       </li>
                       <li>
-                        <a href="#section-screenshots">Screenshots</a>
+                        <a @click="goToHome" href="#section-screenshots"
+                          >Screenshots</a
+                        >
                       </li>
                       <li>
-                        <a href="#section-faq">FAQ</a>
+                        <a @click="goToHome" href="#section-faq">FAQ</a>
                       </li>
                       <li>
-                        <a href="#testimonial-section">Avis</a>
+                        <a @click="goToHome" href="#testimonial-section"
+                          >Avis</a
+                        >
                       </li>
                       <li>
                         <a href="blog.html">Blog</a>
@@ -104,7 +110,7 @@ CSS
       </header>
       <!-- Start header section -->
 
-      <template v-if="!inProductPage">
+      <div v-show="!inProductPage">
         <!-- Start banner section -->
         <section
           class="banner-section relative section-gap-full"
@@ -462,9 +468,9 @@ CSS
           </div>
         </section>
         <!-- End download section -->
-      </template>
+      </div>
 
-      <template v-else>
+      <div v-show="inProductPage">
         <!-- Start page-top-banner section -->
         <section
           class="page-top-banner section-gap-full relative"
@@ -515,7 +521,7 @@ CSS
           </div>
         </section>
         <!-- End product-detials section -->
-      </template>
+      </div>
     </main>
 
     <div class="scroll-top">
