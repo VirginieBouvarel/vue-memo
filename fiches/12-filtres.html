@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue.js : Les filtres</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>{{ text | firstWord | capitalize | lower}}</h1>
+      <h1>{{ text2 | getWordByIndex(2) | capitalize }}</h1>
+    </div>
+
+    <div id="app2">
+      <h1>{{ text | lower}}</h1>
+    </div>
+
+    <script>
+      // Filtres globaux
+      Vue.filter("lower", function (value) {
+        if (!value) return "";
+        value = value.toString();
+        return value.toLowerCase();
+      });
+      Vue.filter("getWordByIndex", function (value, wordIndex) {
+        if (!value) return "";
+        value = value.toString();
+        return value.split(" ")[wordIndex];
+      });
+
+      const app = new Vue({
+        el: "#app",
+        data: {
+          text: "wow du texte",
+          text2: "wow un second texte !",
+        },
+        filters: {
+          // Filtres locaux
+          firstWord: function (value) {
+            if (!value) return "";
+            value = value.toString();
+            return value.split(" ")[0];
+          },
+          capitalize: function (value) {
+            if (!value) return "";
+            value = value.toString();
+            return value.charAt(0).toUpperCase() + value.slice(1);
+          },
+        },
+      });
+
+      const app2 = new Vue({
+        el: "#app2",
+        data: {
+          text: "TEXTE APP2",
+        },
+      });
+    </script>
+  </body>
+</html>
