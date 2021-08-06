@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue.js : Instanciations tardives</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app1">
+      <h1>{{ title }}</h1>
+    </div>
+
+    <div id="app2">
+      <h1>{{ title }}</h1>
+    </div>
+
+    <div id="app3"></div>
+
+    <script>
+      // Instanciation tardive
+      const app1 = new Vue({
+        // pas de el
+        data: {
+          title: "Titre app1",
+        },
+      });
+
+      setTimeout(function () {
+        app1.$mount("#app1");
+      }, 2000);
+
+      // Instanciation tardive et manuelle (ne fonctionne pas tel quel)
+      const app2 = new Vue({
+        // pas de el
+        data: {
+          title: "Titre app2",
+        },
+      });
+
+      app2.$mount(); // génère une erreur
+      console.log(app2.$el); // <h1>Titre app2 <h1>
+      document.body.querySelector("#app2").parentNode.appendChild(app2.$el);
+
+      // création du template depuis l'instance
+      const app3 = new Vue({
+        el: "#app3",
+        template: "<h3>Mon template ! </h3>",
+      });
+    </script>
+  </body>
+</html>

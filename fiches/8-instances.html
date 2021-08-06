@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue.js : Manipuler les instances</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>{{ title }}</h1>
+      <span ref="spanTest">spanTest</span>
+    </div>
+
+    <div id="app2">
+      <h1>{{ title }}</h1>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <script>
+      const dataExt = {
+        title: "Titre extérieur",
+      };
+      const app = new Vue({
+        el: "#app",
+        // data: {
+        //   title: "Instance de vue.js",
+        // },
+        data: dataExt,
+        methods: {
+          sayHello: function () {
+            console.log("Hello");
+          },
+        },
+      });
+
+      console.log(app.title);
+      app.sayHello();
+
+      dataExt.property = "test";
+      console.log(app.property); // undefined
+      console.log(app);
+
+      console.log(app.$el === document.querySelector("#app")); //true
+      console.log(app.$data.title === app.title); //true permet de récupérer l'objet data entier si nécessaire
+
+      console.log(app.$refs.spanTest); // <span>spanTest</span>
+
+      const app2 = new Vue({
+        el: "#app2",
+        // data: {
+        //   title: "Les instances de vue.js",
+        // },
+        data: {
+          title: "Deuxième instance de vue.js",
+        },
+        methods: {
+          edit: function () {
+            this.title = app.title;
+          },
+          showRefs: function () {
+            console.log(app.$refs.spanTest); // <span>spanTest</span>
+          },
+        },
+      });
+
+      console.log(app.title);
+      console.log(app2.title);
+      app2.edit();
+      console.log(app.title);
+      console.log(app2.title);
+    </script>
+  </body>
+</html>
