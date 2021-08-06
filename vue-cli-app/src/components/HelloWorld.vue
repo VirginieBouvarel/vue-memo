@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+    <b-alert show>Coucou !</b-alert>
     <h3>{{ msg }}</h3>
   </div>
 </template>
@@ -19,16 +20,6 @@ $marginHeight: 80px;
 
 h3 {
   margin: $marginHeight 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+  color: $blue;
 }
 </style>
