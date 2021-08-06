@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue.js : Les props (sans Vue-CLI)</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <test-component
+        v-for="word in words"
+        title="Hello"
+        my-text="Test"
+        :title2="title2"
+        :word="word"
+      ></test-component>
+    </div>
+
+    <script>
+      Vue.component("testComponent", {
+        // props: ["title", "myText", "title2", "word"],
+        props: {
+          title: {
+            type: String,
+            required: true,
+            default: "Hello",
+          },
+          myText: {
+            type: String,
+          },
+          title2: {
+            type: [String, Number],
+          },
+          word: {
+            type: String,
+          },
+        },
+        template:
+          "<h1 @click='clickTest'>{{ title }} {{ word }} {{ title2 }} </h1>",
+        methods: {
+          clickTest: function () {
+            alert(this.text);
+          },
+        },
+      });
+
+      new Vue({
+        el: "#app",
+        data: {
+          title2: "World !",
+          words: ["Big", "Great", "Small"],
+        },
+      });
+    </script>
+  </body>
+</html>
